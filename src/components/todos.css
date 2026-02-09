@@ -1,0 +1,113 @@
+/* Main container */
+.mx-auto {
+  min-height: 100vh;               /* body grow nahi hogi */
+  display: flex;
+  flex-direction: column;          /* vertical center */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(135deg, #0ad860, #0a5cd8);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* input + button row */
+.mx-auto > div:first-child {
+  display: flex;
+  gap: 20px;                       /* space between input & button */
+  background: #fff;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+/* input field */
+input[type="text"] {
+  width: 420px;                    /* input bada */
+  padding: 15px 20px;              /* andar space */
+  font-size: 22px;                 /* text bada */
+  border-radius: 20px;
+  transition: 0.3s;
+  color: black;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* add button */
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* todo list container */
+.mx-auto > div:last-child {
+  width: 100%;
+  max-width: 700px;                /* limit width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* single todo item */
+.mx-auto > div:last-child > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  padding: 18px 25px;
+  border-radius: 22px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+/* hover effect */
+.mx-auto > div:last-child > div:hover {
+  transform: translateY(-3px);
+}
+
+/* checkbox */
+input[type="checkbox"] {
+  accent-color: black;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+}
+
+/* todo text */
+p.text-2xl {
+  max-width: 350px;  
+            /* text limit */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+  transition: 0.3s;
+}
+
+/* completed todo */
+p.text-2xl[style*="green"] {
+  text-decoration: line-through;
+}
+
+/* delete button */
+.bg-red-500 {
+  padding: 10px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ff4d4d, #ff0000);
+}
+
+.bg-red-500:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+}
